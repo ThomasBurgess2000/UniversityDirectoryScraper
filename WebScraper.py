@@ -51,7 +51,7 @@ def cas_login(url, username, password):
 
 NetID = "USERNAME"
 Password = "PASSWORD"
-cas_login('https://login.biola.edu/cas/login', NetID, Password)
+cas_login('https://login.RANDOMSCHOOL.edu/cas/login', NetID, Password)
 
 
 #Iterate through x-1 pages
@@ -63,7 +63,7 @@ while i < 387:
 #Make a list (listOfNames) of all the names on the page
   
     iStr=str(i)
-    url=('https://www.biola.edu/directory/search?_type=person&login=true&page='+iStr)
+    url=('https://www.RANDOMSCHOOL.edu/directory/search?_type=person&login=true&page='+iStr)
     result=session.get(url,cookies=session.cookies)
     HTMLsoup=BeautifulSoup(result.text)
     nameList2=HTMLsoup.findAll(class_="title")
